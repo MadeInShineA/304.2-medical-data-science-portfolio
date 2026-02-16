@@ -1,0 +1,14 @@
+---
+title: "304.2 Medical Data Science course portfolio"
+listing:
+  contents: ./articles
+  type: table
+  categories: true      # tag list
+  sort: "date desc"     # last posted on top
+  fields: [date, title, categories] # tags
+---
+
+## Hello world
+
+Welcome to my project documentation. Use the tags on the right to filter by week or topic.
+

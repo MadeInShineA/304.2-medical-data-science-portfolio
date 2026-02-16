@@ -1,0 +1,40 @@
+project:
+  type: website
+  output-dir: _site
+  render:
+    - src/index.qmd
+    - src/articles/*
+
+website:
+  title: "304.2 Medical data science course portfolio"
+  repo-url: https://github.com/MadeInShineA/304.2-medical-data-science-portfolio
+  repo-actions: [edit]
+  navbar:
+    tools:
+      - icon: github
+        href: https://github.com/MadeInShineA/304.2-medical-data-science-portfolio
+        target: _blank
+        text: Project GitHub
+
+  page-footer:
+    left: |
+      Made with [Quarto](https://quarto.org/){target="_blank"}
+    center:
+      - text: "304.2 Medical data science course | © 2026"
+    right:
+      - icon: github
+        href: https://github.com/MadeInShineA/304.2-medical-data-science-portfolio
+        target: _blank
+        aria-label: Project GitHub
+
+format:
+  html:
+    respect-user-color-scheme: true
+    toc: true
+    toc-title: "Table of Content"
+    toc-depth: 4
+    theme:
+      light: [cosmo, src/theme.scss]
+      dark: [cosmo, src/theme-dark.scss]
+    code-copy: true
+    code-overflow: wrap

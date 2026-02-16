@@ -1,0 +1,25 @@
+---
+title: "Setting up the project and portfolio repositories"
+date: "2026-02-16"
+categories: ["Week 1", "Setup"]
+---
+
+## Setting up the project repository
+
+The project github can be found [here](https://github.com/MadeInShineA/304.2-medical-data-science){target="_blank"}
+
+It was setup as follow:
+
+ - A basic readme was created
+ - A small quarto website was added and automatically deployed [here](https://olivier.amacker.dev/304.2-medical-data-science/src/){target="_blank"} using [github actions](https://github.com/features/actions){target="_blank"}
+
+
+## Setting up the portfolio repository
+
+
+The portfolio github can be found [here](https://github.com/MadeInShineA/304.2-medical-data-science){target="_blank"}
+
+It was setup as follow:
+
+ - A basic readme was created
+ - A small quarto website was added and automatically deployed [here](https://olivier.amacker.dev/304.2-medical-data-science-portfolio/src/){target="_blank"} using [github actions](https://github.com/features/actions){target="_blank"}

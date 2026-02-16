@@ -1,0 +1,53 @@
+---
+title: "06.02.2026 Team Meeting"
+date: "2026-02-16"
+categories: ["Week 1", "Meeting"]
+---
+
+A meeting was hosted between the different team members.
+
+## Team structure
+
+We agreed on the following team structure:
+ 
+```{mermaid}
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffffff', 'edgeLabelBackground':'#f8f9fa', 'tertiaryColor': '#e9ecef', 'fontFamily': 'Inter, system-ui, sans-serif', 'nodeBorder': '#495057', 'mainBkg': '#ffffff', 'textColor': '#212529'}}}%%
+
+flowchart TB
+    classDef team fill:#3498db,stroke:#2980b9,stroke-width:2px,color:white,rx:8,ry:8,padding:10px;
+    classDef subteam fill:#2ecc71,stroke:#27ae60,stroke-width:2px,color:white,rx:8,ry:8,padding:10px;
+    classDef person fill:#ffffff,stroke:#95a5a6,stroke-width:1.5px,color:#2c3e50,rx:6,ry:6,padding:8px;
+
+    A["Application"]:::team
+    B["Captors"]:::team
+    C["Data"]:::team
+    
+    A --> Simon["Simon"]:::person
+    A --> Robin["**Robin**"]:::person
+    
+    B --> Filip["Filip"]:::person
+    B --> Ana["Ana"]:::person
+    B --> Yolan["**Yolan**"]:::person
+    
+    C --> Storage["Storage"]:::subteam
+    C --> Processing["Processing"]:::subteam
+    
+    Storage --> Vincent["Vincent"]:::person
+    Storage --> Olivier["**Olivier**"]:::person
+    
+    Processing --> Loic["Loic"]:::person
+    Processing --> Unal["Unal"]:::person
+
+    linkStyle default stroke:#bdc3c7,stroke-width:1.5px;
+```
+It should be noted that the **bold** names represent team leaders, who will have an extra weekly meeting.
+
+## Role rotation
+
+We also determined the scrum / product owner rotation schedule as follow:
+
+|                   | Week 1 | Week 2 | Week 3 | Week 4 | Week 5 | Week 6 | Week 7 |
+|-------------------|---------|-------|--------|--------|--------|--------|--------|
+| **Scrum master**  | Olivier | Ana   | Simon  | Yolan  | Loic   | Unal   | Vincent|
+| **Product owner** | Ana     | Olivier | Yolan| Simon  | Unal   | Filip  | Robin  |
+
