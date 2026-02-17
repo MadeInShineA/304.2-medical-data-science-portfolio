@@ -1,0 +1,135 @@
+---
+title: "Week 1: [Project Setup & Meetings]"
+date: 2026-02-20
+format:
+  html:
+    toc: true
+    toc-depth: 4
+---
+
+> **Role this week**: Scrum master + Data engineer
+
+## What was done ?
+
+### Team organization
+
+As a scrum master, I took care of leading the discussion regarding the organization of my 9 developers team.
+
+We came to this structure:
+
+```{mermaid}
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffffff', 'edgeLabelBackground':'#f8f9fa', 'tertiaryColor': '#e9ecef', 'fontFamily': 'Inter, system-ui, sans-serif', 'nodeBorder': '#495057', 'mainBkg': '#ffffff', 'textColor': '#212529'}}}%%
+
+flowchart TB
+    classDef team fill:#3498db,stroke:#2980b9,stroke-width:2px,color:white,rx:8,ry:8,padding:10px;
+    classDef subteam fill:#2ecc71,stroke:#27ae60,stroke-width:2px,color:white,rx:8,ry:8,padding:10px;
+    classDef person fill:#ffffff,stroke:#95a5a6,stroke-width:1.5px,color:#2c3e50,rx:6,ry:6,padding:8px;
+
+    A["Application"]:::team
+    B["Captors"]:::team
+    C["Data"]:::team
+    
+    A --> Simon["Simon"]:::person
+    A --> Robin["**Robin**"]:::person
+    
+    B --> Filip["Filip"]:::person
+    B --> Ana["Ana"]:::person
+    B --> Yolan["**Yolan**"]:::person
+    
+    C --> Storage["Storage"]:::subteam
+    C --> Processing["Processing"]:::subteam
+    
+    Storage --> Vincent["Vincent"]:::person
+    Storage --> Olivier["**Olivier**"]:::person
+    
+    Processing --> Loic["Loic"]:::person
+    Processing --> Unal["Unal"]:::person
+
+    linkStyle default stroke:#bdc3c7,stroke-width:1.5px;
+```
+
+It should be noted that the **bold** names represent team leaders, who will have an extra weekly meeting (based on my suggestion).
+
+We also had to agree to a rotation of the scrum master, product owner and client relationship roles
+
+Here is what we agreed on:
+
+
+|                         | Week 1  | Week 2   | Week 3 | Week 4 | Week 5 | Week 6        | Week 7 |
+|-------------------------|---------|---------|---------|--------|--------|---------------|--------|
+| **Scrum master**        | Olivier | Ana     | Simon   | Yolan  | Loic   | Unal          | Vincent|
+| **Product owner**       | Ana     | Olivier | Yolan   | Simon  | Unal   | Filip         | Robin  |
+| **Client relationship** | Vincent | -       | Filip   | -      |  -     | Robin & Loic  | -      |
+
+### Development environment setup
+
+I setup a basic development environment including a project repository (see [github](https://github.com/madeinshinea/304.2-medical-data-science){target="_blank"})
+
+This includes:
+
+ - a basic [README file](https://github.com/MadeInShineA/304.2-medical-data-science/blob/main/README.md){target="_blank"}, 
+ - a small [project website](https://olivier.amacker.dev/304.2-medical-data-science/){target="_blank"}  made with [quarto](https://quarto.org/){target="_blank"}
+deployed to a [github page](https://docs.github.com/en/pages){target="_blank"}
+through a [github action](https://github.com/features/actions) (see [action](https://github.com/MadeInShineA/304.2-medical-data-science/blob/main/.github/workflows/deploy_website.yml){target="_blank"})
+
+I also convinced my classmates to use github policies as follow:
+
+ - Each feature must be developed on a separate branch
+ - A pull request needs to be made to evaluate a feature
+ - The feature pull requests need to be verified by at least 2 other individuals, including 1 from another team
+
+### Collaborative environment setup
+
+I convinced my fellow colleagues to use [Jira](https://www.atlassian.com/software/jira){target="_blank"}. This decision was motivated
+by the fact that's it's an industry standard.
+
+We also setup the according teams, with specific filters to help people quickly what task they need to do 
+<br>(as seen on @fig-jira-filters )
+
+![Jira filters overview](../assets/week-1/jira-filters.png){#fig-jira-filters}
+
+### Kick off meeting
+
+On Tuesday morning, we had a meeting with the CEO and CTO of our company (5MM).
+
+During this meeting, we were asked to introduce ourselves, and come to agreement regarding the different positions within the group.
+
+As this week scrum master, I was successfully able to keep the meeting easy going and focused on the things that needed to be done.
+
+
+### Sprint 1 planning
+
+The planning of the first sprint was elaborated on Tuesday afternoon
+
+You can see on @fig-test bellow what we came up with
+
+
+
+
+![Jira dashboard overview](../assets/week-1/jira.png){#fig-test}
+
+
+
+## What skills does this demonstrate
+
+### Data Engineering Competencies
+- **CI/CD & Automation**: Deployed GitHub Actions workflow for Quarto → GitHub Pages publishing.
+- **Git Workflow Design**: Implemented feature-branch strategy with mandatory cross-team PR reviews.
+- **Documentation-as-Code**: Built living docs (README + Quarto site) for onboarding and reference.
+
+### Computer Science Engineering Competencies
+- **Toolchain Selection**: Introduced Jira, GitHub, and Quarto as an integrated, industry-standard stack.
+- **Process Engineering**: Defined branching, PR, and verification policies balancing speed and quality.
+- **Team Architecture**: Organized 9 developers into 3 functional subteams with clear leadership paths.
+
+### Professional Skills (soft skills)
+- **Agile Facilitation**: Led Sprint 1 planning and Scrum Master rotation for shared ownership.
+- **Stakeholder Management**: Kept kick-off with CEO/CTO focused on roles and deliverables.
+- **Consensus Building**: Advocated successfully for GitHub policies and Jira adoption.
+- **Proactive Coordination**: Designed role-rotation schedule to build versatility and prevent burnout.
+
+
+## Weekly questions:
+
+ - How was the development environment setup ?
+ - How was the collaborative environment setup ?

@@ -1,14 +1,31 @@
 ---
-title: "304.2 Medical Data Science course portfolio"
+title: "304.2 Medical Data Science Portfolio"
+published-title: "Last updated on"
+date: 2026-02-17
 listing:
-  contents: ./articles
+- id: portfolios
+  contents: ./articles/
   type: table
-  categories: true      # tag list
   sort: "date desc"     # last posted on top
-  fields: [date, title, categories] # tags
+  fields: [date, title] # tags
 ---
 
-## Hello world
+## Course Overview
 
-Welcome to my project documentation. Use the tags on the right to filter by week or topic.
+Welcome to my project documentation for the **304.2 Medical Data Science course**.
+This portfolio tracks my progress, assignments, and analysis throughout the whole project.
+
+> **Tip:** You can sort the tables below by clicking on the column headers.
+
+---
+
+
+## The different portfolios
+
+
+:::{#portfolios}
+:::
+
+
+
 
