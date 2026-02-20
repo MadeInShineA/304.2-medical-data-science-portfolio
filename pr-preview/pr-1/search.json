@@ -1,0 +1,51 @@
+[
+  {
+    "objectID": "src/articles/week-1.html",
+    "href": "src/articles/week-1.html",
+    "title": "Week 1: [Project Setup & Meetings]",
+    "section": "",
+    "text": "Role this week: Scrum master + Data team leader"
+  },
+  {
+    "objectID": "src/articles/week-1.html#what-was-done",
+    "href": "src/articles/week-1.html#what-was-done",
+    "title": "Week 1: [Project Setup & Meetings]",
+    "section": "What was done ?",
+    "text": "What was done ?\n\nTeam organization\nAs a scrum master, I took care of leading the discussion regarding the organization of my 9 developers team.\nWe came to this structure:\n\n\n\n\n\n%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffffff', 'edgeLabelBackground':'#f8f9fa', 'tertiaryColor': '#e9ecef', 'fontFamily': 'Inter, system-ui, sans-serif', 'nodeBorder': '#495057', 'mainBkg': '#ffffff', 'textColor': '#212529'}}}%%\n\nflowchart TB\n    classDef team fill:#3498db,stroke:#2980b9,stroke-width:2px,color:white,rx:8,ry:8,padding:10px;\n    classDef subteam fill:#2ecc71,stroke:#27ae60,stroke-width:2px,color:white,rx:8,ry:8,padding:10px;\n    classDef person fill:#ffffff,stroke:#95a5a6,stroke-width:1.5px,color:#2c3e50,rx:6,ry:6,padding:8px;\n\n    A[\"Application\"]:::team\n    B[\"Captors\"]:::team\n    C[\"Data\"]:::team\n    \n    A --&gt; Simon[\"Simon\"]:::person\n    A --&gt; Robin[\"**Robin**\"]:::person\n    \n    B --&gt; Filip[\"Filip\"]:::person\n    B --&gt; Ana[\"Ana\"]:::person\n    B --&gt; Yolan[\"**Yolan**\"]:::person\n    \n    C --&gt; Storage[\"Storage\"]:::subteam\n    C --&gt; Processing[\"Processing\"]:::subteam\n    \n    Storage --&gt; Vincent[\"Vincent\"]:::person\n    Storage --&gt; Olivier[\"**Olivier**\"]:::person\n    \n    Processing --&gt; Loic[\"Loic\"]:::person\n    Processing --&gt; Unal[\"Unal\"]:::person\n\n    linkStyle default stroke:#bdc3c7,stroke-width:1.5px;\n\n\n\n\n\n\nIt should be noted that the bold names represent team leaders, who will have an extra weekly meeting (based on my suggestion).\nWe also had to agree to a rotation of the scrum master, product owner and client relationship roles\nHere is what we agreed on:\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 1\nWeek 2\nWeek 3\nWeek 4\nWeek 5\nWeek 6\nWeek 7\n\n\n\n\nScrum master\nOlivier\nAna\nSimon\nYolan\nLoic\nUnal\nVincent\n\n\nProduct owner\nAna\nOlivier\nYolan\nSimon\nUnal\nFilip\nRobin\n\n\nClient relationship\nVincent\n-\nFilip\n-\n-\nRobin & Loic\n-\n\n\n\n\n\nDevelopment environment setup\nI setup a basic development environment including a project repository (see github)\nThis includes:\n\na basic README file,\na small project website made with quarto deployed to a github page through a github action (see action)\n\nI also convinced my classmates to use github policies as follow:\n\nEach feature must be developed on a separate branch\nA pull request needs to be made to evaluate a feature\nThe feature pull requests need to be verified by at least 2 other individuals, including 1 from another team\n\n\n\nCollaborative environment setup\nI convinced my fellow colleagues to use Jira. This decision was motivated by the fact that’s it’s an industry standard.\nWe also setup the according teams, with specific filters to help people quickly what task they need to do (as seen on Figure 1 )\n\n\n\n\n\n\nFigure 1: Jira filters overview\n\n\n\n\n\nKick off meeting\nOn Tuesday morning, we had a meeting with the CEO and CTO of our company (5MM).\nDuring this meeting, we were asked to introduce ourselves, and come to agreement regarding the different positions within the group.\nAs this week scrum master, I was successfully able to keep the meeting easy going and focused on the things that needed to be done.\n\n\nSprint 1 planning\nThe planning of the first sprint was elaborated on Tuesday afternoon\nYou can see on Figure 2 bellow what we came up with\n\n\n\n\n\n\nFigure 2: Jira dashboard overview"
+  },
+  {
+    "objectID": "src/articles/week-1.html#what-skills-does-this-demonstrate",
+    "href": "src/articles/week-1.html#what-skills-does-this-demonstrate",
+    "title": "Week 1: [Project Setup & Meetings]",
+    "section": "What skills does this demonstrate",
+    "text": "What skills does this demonstrate\n\nData Engineering Competencies\n\nCI/CD & Automation: Deployed GitHub Actions workflow for Quarto → GitHub Pages publishing.\nGit Workflow Design: Implemented feature-branch strategy with mandatory cross-team PR reviews.\nDocumentation-as-Code: Built living docs (README + Quarto site) for onboarding and reference.\n\n\n\nComputer Science Engineering Competencies\n\nToolchain Selection: Introduced Jira, GitHub, and Quarto as an integrated, industry-standard stack.\nProcess Engineering: Defined branching, PR, and verification policies balancing speed and quality.\nTeam Architecture: Organized 9 developers into 3 functional subteams with clear leadership paths.\n\n\n\nProfessional Skills (soft skills)\n\nAgile Facilitation: Led Sprint 1 planning and Scrum Master rotation for shared ownership.\nStakeholder Management: Kept kick-off with CEO/CTO focused on roles and deliverables.\nConsensus Building: Advocated successfully for GitHub policies and Jira adoption.\nProactive Coordination: Designed role-rotation schedule to build versatility and prevent burnout."
+  },
+  {
+    "objectID": "src/articles/week-1.html#weekly-questions",
+    "href": "src/articles/week-1.html#weekly-questions",
+    "title": "Week 1: [Project Setup & Meetings]",
+    "section": "Weekly questions:",
+    "text": "Weekly questions:\n\nHow was the development environment setup ?\nHow was the collaborative environment setup ?"
+  },
+  {
+    "objectID": "src/index.html",
+    "href": "src/index.html",
+    "title": "304.2 Medical Data Science Portfolio",
+    "section": "",
+    "text": "Welcome to my project documentation for the 304.2 Medical Data Science course. This portfolio tracks my progress, assignments, and analysis throughout the whole project.\n\nTip: You can sort the tables below by clicking on the column headers."
+  },
+  {
+    "objectID": "src/index.html#course-overview",
+    "href": "src/index.html#course-overview",
+    "title": "304.2 Medical Data Science Portfolio",
+    "section": "",
+    "text": "Welcome to my project documentation for the 304.2 Medical Data Science course. This portfolio tracks my progress, assignments, and analysis throughout the whole project.\n\nTip: You can sort the tables below by clicking on the column headers."
+  },
+  {
+    "objectID": "src/index.html#the-different-portfolios",
+    "href": "src/index.html#the-different-portfolios",
+    "title": "304.2 Medical Data Science Portfolio",
+    "section": "The different portfolios",
+    "text": "The different portfolios\n\n\n   \n    \n    \n      Order By\n      Default\n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Title\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\n\nTitle\n\n\n\n\n\n\n\n\nFeb 20, 2026\n\n\nWeek 1: [Project Setup & Meetings]\n\n\n\n\n\n\nNo matching items"
+  }
+]
