@@ -13,11 +13,40 @@ The website contains the following sections:
 
 ## Local Setup
 
-To set up the project website locally:
+To build the project website locally, choose one of the following workflows:
 
-1. Install [uv](https://docs.astral.sh/uv/getting-started/installation/)
+### Option 1: Standard Setup
+
+1. Install [Quarto](https://quarto.org/docs/get-started/)
+
 2. Clone the repository
-3. Run `uv sync` to install dependencies
-4. Run `uv run quarto render` to build the site
+    ```bash
+    git clone https://github.com/MadeInShineA/304.2-medical-data-science
+    cd 304.2-medical-data-science
+    ``` 
+3. Render the site
+    ```bash
+    quarto render
+    ``` 
+
+### Option 2: Nix Setup
+
+1. Ensure [Nix](https://nixos.org/download/) is installed
+
+2. Clone the repository
+    ```bash
+    git clone https://github.com/MadeInShineA/304.2-medical-data-science
+    cd 304.2-medical-data-science
+    ``` 
+3. Enter the development shell
+    This provides Quarto and all project dependencies in an isolated environment:
+    ```bash
+    nix develop
+    ``` 
+
+4. Render the site
+    ```bash
+    quarto render
+    ``` 
 
 The site will be in the `_site/` directory.
