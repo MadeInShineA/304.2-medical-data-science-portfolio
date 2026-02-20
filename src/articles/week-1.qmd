@@ -7,7 +7,7 @@ format:
     toc-depth: 4
 ---
 
-> **Role this week**: Scrum master + Data engineer
+> **Role this week**: Scrum master + Data team leader
 
 ## What was done ?
 

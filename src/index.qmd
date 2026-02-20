@@ -1,29 +1,6 @@
 ---
 title: "304.2 Medical Data Science Portfolio"
-listing:
-- id: portfolios
-  contents: ./articles/
-  type: table
-  sort: "date desc"     # last posted on top
-  fields: [date, title] # tags
 ---
 
-## Course Overview
-
-Welcome to my project documentation for the **304.2 Medical Data Science course**.
-This portfolio tracks my progress, assignments, and analysis throughout the whole project.
-
-> **Tip:** You can sort the tables below by clicking on the column headers.
-
----
-
-
-## The different portfolios
-
-
-:::{#portfolios}
-:::
-
-
-
-
+## This is a working demo of this pr own project website
+See the real project website [here](https://olivier.amacker.dev/304.2-medical-data-science-portfolio){target="_blank"}
