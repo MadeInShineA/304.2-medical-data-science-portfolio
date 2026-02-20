@@ -32,17 +32,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      # 1. Setup UV (Python package manager)
-      - name: Setup UV
-        uses: astral-sh/setup-uv@v3
-        with:
-          enable-cache: true
+      # 1. Setup Quarto
+      - name: Setup Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
 
-      # 3. Install dependencies and Render the site
-      - name: Install dependencies and Render
-        run: |
-          uv sync
-          uv run quarto render
+      # 2. Render the site
+      - name: Render Site
+        run: quarto render
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
