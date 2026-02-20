@@ -3,7 +3,6 @@ project:
   output-dir: _site
   render:
     - src/index.qmd
-    - src/articles/*
 
 website:
   title: "304.2 Medical data science course portfolio"
