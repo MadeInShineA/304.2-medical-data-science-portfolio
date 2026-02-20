@@ -11,7 +11,7 @@ listing:
 ## Course Overview
 
 Welcome to my project documentation for the **304.2 Medical Data Science course**.
-This portfolio tracks my progress, assignments, and analysis throughout the whole project.
+This portfolios track my progress, assignments, and analysis throughout the whole project.
 
 > **Tip:** You can sort the tables below by clicking on the column headers.
 
