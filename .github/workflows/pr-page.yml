@@ -1,0 +1,38 @@
+name: Deploy PR previews
+
+on:
+  pull_request:
+    types:
+      - opened
+      - reopened
+      - synchronize
+      - closed
+
+# Cancel ongoing runs if new commits are pushed to the same PR
+concurrency:
+  group: preview-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  deploy-preview:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # Required to push to the gh-pages branch
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+
+      - name: Render Site
+        # Skip rendering if the PR is closed (we only need to clean up)
+        if: github.event.action != 'closed'
+        run: quarto render
+
+      - name: Deploy preview
+        uses: rossjrw/pr-preview-action@v1
+        with:
+          source-dir: ./_site/       # Quarto default output directory
+          preview-branch: gh-pages   # Must match your GitHub Pages source branch
+          qr-code: true
