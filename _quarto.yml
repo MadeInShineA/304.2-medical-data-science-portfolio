@@ -4,6 +4,7 @@ project:
   render:
     - src/index.qmd
     - src/articles/*
+    - src/assets/week-1/github_policy.qmd
 
 website:
   title: "304.2 Medical data science course portfolio"

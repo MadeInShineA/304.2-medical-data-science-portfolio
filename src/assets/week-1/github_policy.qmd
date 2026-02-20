@@ -1,0 +1,104 @@
+---
+title: "Github policy"
+format:
+  html:
+    toc: true
+---
+
+## General Guidelines
+- **Language:** All documentation, commit messages, PR descriptions, comments, and issues must be written in English.
+- **Task Management:** All tasks must be tracked via [github issues](https://github.com/features/issues){target="_blank"}. No work should begin without an associated issue.
+- **CI/CD:** Continuous Integration and Deployment pipelines are mandatory.
+  - Automatic tests must run on every Pull Request.
+  - The application must build successfully upon release.
+
+## Branching Strategy
+We follow a git flow inspired strategy with two long-lived branches: `main` and `dev`.
+
+
+- **`main`**: Production-ready code. Stable releases only.
+- **`dev`**: Integration branch. Features are merged here for testing before production.
+- **Feature Branches:** Each feature or fix must be developed on a separate branch created from `dev`.
+  - **Naming Convention:** `<type>/<description>`
+  - **Examples:**
+    - `feat/user-login-pages`
+    - `fix/cdc-connection`
+
+The possible tags can be found here:
+
+| Type | Usage |
+| :--- | :--- |
+| `feat` | New feature |
+| `fix` | Bug fix |
+| `refactor` | Code refactor without functional change |
+| `docs` | Documentation changes |
+| `test` | Adding or modifying tests |
+| `chore` | Config, dependencies, CI changes |
+| `style` | Formatting only (no code logic change) |
+| `perf` | Performance improvements |
+
+#### Commit Standards
+- **Format:** `<type>: <Description>`
+- **Style:** Imperative mood (e.g., "Add" instead of "Added").
+- **Examples:**
+  - `fix: Auto refresh issue`
+  - `test: Add login test`
+  - `docs: Update bluetooth technical guide`
+- **Merge Strategy:** All merges into `dev` and `main` must use **Squash & Merge** to keep history clean.
+
+## Pull Request (PR) Workflow
+A Pull Request is required to evaluate any feature. Merging rules differ based on the target branch.
+
+### PR to `dev`
+- **Description:** Must summarize added features and precisely describe what was done.
+- **Requirements:**
+  - Must include relevant tests.
+  - Must include technical documentation (GitHub Wiki{target="_blank"}).
+  - Must include user documentation (Quarto/Website).
+  - Must be linked to one or more Issues.
+- **Approval:** Requires verification by **at least 2 individuals**:
+  - 1 member from the current team.
+  - 1 member from **another team** (external review).
+
+### PR to `main` (Release)
+- **Description:** Must contain a summary of features (with links to the Wiki if possible).
+- **Approval:** Must be explicitly accepted by the **Scrum Master** and the **Product Owner**.
+
+## Issue Management
+- **Templates:** Issues must follow a precise template to ensure consistency.
+- **Metadata:** Issues must contain relevant tags/labels.
+- **Quality:** Issues must be clear, consistent, and actionable before development starts.
+
+## Versioning & Releases
+- **Versioning:** Clear versioning must be maintained for the client (e.g., Semantic Versioning).
+- **Patchnotes:** A detailed patchnote documenting all additions and changes must be created for every new version.
+- **Tagging:** Releases on `main` must be tagged (e.g., `v1.0.0`).
+
+## Visual Workflow
+The following graph illustrates the standard development lifecycle, from feature creation to release:
+
+```{mermaid}
+gitGraph
+    commit id: "Init"
+    branch dev
+    checkout dev
+    
+    branch feat/user-login-pages
+    checkout feat/user-login-pages
+    commit id: "feat: Login UI"
+    commit id: "test: Add login test"
+    commit id: "fix: Auto refresh issue"
+
+    checkout dev
+    merge feat/user-login-pages id: "Squash Merge 1" type: HIGHLIGHT
+    
+    branch fix/cdc-connection
+    checkout fix/cdc-connection
+    commit id: "fix: CDC connection bug"
+    
+    checkout dev
+    merge fix/cdc-connection id: "Squash Merge 2" type: HIGHLIGHT
+    
+    checkout main
+    merge dev id: "Release v1.0.0" tag: "v1.0.0" type: HIGHLIGHT
+```

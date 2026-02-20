@@ -71,12 +71,10 @@ This includes:
  - a small [project website](https://olivier.amacker.dev/304.2-medical-data-science/){target="_blank"}  made with [quarto](https://quarto.org/){target="_blank"}
 deployed to a [github page](https://docs.github.com/en/pages){target="_blank"}
 through a [github action](https://github.com/features/actions) (see [action](https://github.com/MadeInShineA/304.2-medical-data-science/blob/main/.github/workflows/deploy_website.yml){target="_blank"})
+- another github action to make available their own project website version to each pull request (see [action](https://github.com/MadeInShineA/304.2-medical-data-science-portfolio/blob/main/.github/workflows/pr-page.yml){target="_blank"} and [result example](https://github.com/MadeInShineA/304.2-medical-data-science-portfolio/pull/3){target="_blank})
 
-I also convinced my classmates to use github policies as follow:
+I also encouraged my classmates to use a well defined strict github policy (see [policy](../assets/week-1/github_policy.qmd){target="_blank"})
 
- - Each feature must be developed on a separate branch
- - A pull request needs to be made to evaluate a feature
- - The feature pull requests need to be verified by at least 2 other individuals, including 1 from another team
 
 ### Collaborative environment setup
 
@@ -133,3 +131,4 @@ You can see on @fig-test bellow what we came up with
 
  - How was the development environment setup ?
  - How was the collaborative environment setup ?
+ - What did you do as the scrum master ?

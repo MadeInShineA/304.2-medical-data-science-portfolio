@@ -1,7 +1,5 @@
 ---
 title: "304.2 Medical Data Science Portfolio"
-published-title: "Last updated on"
-date: 2026-02-17
 listing:
 - id: portfolios
   contents: ./articles/
